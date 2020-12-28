@@ -6,6 +6,15 @@ Fasd: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/fasd/package/fasd/stat
 ### Method
 - create template with `rpmdev-newspec --macros foo.spec`
 - test with `rpmbuild -bb foo.spec`
+- push changes and create in COPR with:
+     copr-cli add-package-scm \
+        --name $PKG \
+        --clone-url https://github.com/rdnetto/misc-copr-specs.git \
+        --subdir $PKG \
+        --spec $PKG.spec \
+        --webhook-rebuild on fasd
+- see [here](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/integrations/) for how to enable webhook integration
+- manually trigger a rebuild using [this](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/packages/), which will autopopulate the build form with your usual settings
 
 # Cheat sheet
 - install dependencies with `dnf builddep foo.spec`
