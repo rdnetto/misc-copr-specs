@@ -17,6 +17,8 @@ Source0:        https://github.com/rdnetto/powerline-hs/archive/v%{version}.tar.
 Source1:        https://github.com/powerline/powerline/archive/%{powerline_version}.tar.gz
 
 BuildRequires:  stack
+# Used for configuring GHC
+BuildRequires:  perl
 Requires:       gmp-c++
 Requires:       zlib
 
