@@ -37,9 +37,6 @@ mv powerline-%{powerline_version} powerline
 export POWERLINE_VER=%{powerline_version}
 export POWERLINE_HS_VER=%{version}
 
-# For debugging build failures
-stack setup --verbose
-
 stack build
 
 
