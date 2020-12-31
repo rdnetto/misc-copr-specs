@@ -1,8 +1,9 @@
 # Misc COPR Specs
 Spec files for miscellaneous packages that were not present on COPR.
 
-Fasd: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/fasd/package/fasd/status_image/last_build.png)
-Powerline-hs: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/powerline-hs/package/powerline-hs/status_image/last_build.png)
+- Fasd: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/fasd/package/fasd/status_image/last_build.png)
+- Powerline-hs: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/powerline-hs/package/powerline-hs/status_image/last_build.png)
+- dispatch-merge: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/dispatch-merge/package/dispatch-merge/status_image/last_build.png)
 
 ### Method
 - create template with `rpmdev-newspec --macros foo.spec`
@@ -16,7 +17,8 @@ Powerline-hs: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/powerline-hs/p
         --webhook-rebuild on \
         $PKG
 - see [here](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/integrations/) for how to enable webhook integration
-- manually trigger a rebuild using [this](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/packages/), which will autopopulate the build form with your usual settings
+    - enable the webhook *before* you push, to ensure that it's working
+- update the list of status badges above
 
 # Cheat sheet
 - install dependencies with `dnf builddep foo.spec`
