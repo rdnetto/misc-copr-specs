@@ -1,5 +1,3 @@
-# Packaging file for Fedora
-
 # Version of powerline included as a submodule of powerline-hs
 %define powerline_version 2.5.2
 

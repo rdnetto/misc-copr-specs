@@ -13,7 +13,8 @@ Powerline-hs: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/powerline-hs/p
         --clone-url https://github.com/rdnetto/misc-copr-specs.git \
         --subdir $PKG \
         --spec $PKG.spec \
-        --webhook-rebuild on fasd
+        --webhook-rebuild on \
+        $PKG
 - see [here](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/integrations/) for how to enable webhook integration
 - manually trigger a rebuild using [this](https://copr.fedorainfracloud.org/coprs/rdnetto/$PROJECT/packages/), which will autopopulate the build form with your usual settings
 
