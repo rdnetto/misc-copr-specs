@@ -5,6 +5,7 @@ Spec files for miscellaneous packages that were not present on COPR.
 - Powerline-hs: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/powerline-hs/package/powerline-hs/status_image/last_build.png)
 - dispatch-merge: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/dispatch-merge/package/dispatch-merge/status_image/last_build.png)
 - diff-so-fancy: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/diff-so-fancy/package/diff-so-fancy/status_image/last_build.png)
+- ollama: ![](https://copr.fedorainfracloud.org/coprs/rdnetto/ollama/package/ollama/status_image/last_build.png)
 
 ### Method
 - create template with `rpmdev-newspec --macros foo.spec`
