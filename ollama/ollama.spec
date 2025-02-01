@@ -6,7 +6,8 @@ Summary:        AI assistant daemon
 License:        MIT
 URL:            https://github.com/ollama/ollama
 Source0:        https://github.com/ollama/ollama/archive/refs/tags/v%{version}.zip
-Source1:        https://github.com/mwprado/ollamad/archive/refs/heads/main.zip
+# Pinned source files
+Source1:        https://github.com/mwprado/ollamad/archive/bdafad591e61bcbbb153e82dc66514b7cfebbeac.zip
 
 BuildArch:      %{_arch}
 	
