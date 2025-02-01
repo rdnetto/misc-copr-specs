@@ -7,7 +7,8 @@ License:        MIT
 URL:            https://github.com/ollama/ollama
 Source0:        https://github.com/ollama/ollama/archive/refs/tags/v%{version}.zip
 # Pinned source files
-Source1:        https://github.com/mwprado/ollamad/archive/bdafad591e61bcbbb153e82dc66514b7cfebbeac.zip
+%global config_commit bdafad591e61bcbbb153e82dc66514b7cfebbeac
+Source1:        https://github.com/mwprado/ollamad/archive/%{config_commit}.zip
 
 BuildArch:      %{_arch}
 	
@@ -36,10 +37,10 @@ go build
 install -Dm0755 %{_builddir}/ollama-%{version}/ollama %{buildroot}%{_bindir}/ollama
 
 # Install Systemd service file
-install -Dm0644 %{_builddir}/ollama-%{version}/ollamad-main/ollamad.service %{buildroot}%{_unitdir}/ollamad.service
+install -Dm0644 %{_builddir}/ollama-%{version}/ollamad-%{config_commit}/ollamad.service %{buildroot}%{_unitdir}/ollamad.service
 
 # Install Config  Systemd Service file
-install -Dm0644 %{_builddir}/ollama-%{version}/ollamad-main/ollamad.conf    %{buildroot}%{_sysconfdir}/ollama/ollamad.conf
+install -Dm0644 %{_builddir}/ollama-%{version}/ollamad-%{config_commit}/ollamad.conf    %{buildroot}%{_sysconfdir}/ollama/ollamad.conf
            
 %files
 %defattr(-,root,root)
